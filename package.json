@@ -1,0 +1,32 @@
+{
+  "name": "yaf",
+  "description": "A formatter that doesn't format anything.",
+  "version": "0.0.1",
+  "publisher": "okayurisotto",
+  "repository": "https://github.com/okayurisotto/yaf.git",
+  "private": true,
+  "license": "CC0-1.0",
+  "engines": {
+    "vscode": "^0.0.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/index.js",
+  "scripts": {
+    "build": "node build.js",
+    "typecheck": "tsc",
+    "watch": "node build.js watch"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.0",
+    "@types/node": "^18.15.11",
+    "@types/vscode": "^1.77.0",
+    "esbuild": "^0.17.16",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.4"
+  }
+}
