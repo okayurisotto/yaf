@@ -8,11 +8,23 @@ class DocumentFormattingEditProvider
   }
 }
 
+class DocumentRangeFormattingEditProvider
+  implements vscode.DocumentRangeFormattingEditProvider
+{
+  provideDocumentRangeFormattingEdits() {
+    return [];
+  }
+}
+
 export const activate = (context: vscode.ExtensionContext) => {
   context.subscriptions.push(
     vscode.languages.registerDocumentFormattingEditProvider(
       "*",
       new DocumentFormattingEditProvider(),
+    ),
+    vscode.languages.registerDocumentRangeFormattingEditProvider(
+      "*",
+      new DocumentRangeFormattingEditProvider(),
     ),
   );
 };
